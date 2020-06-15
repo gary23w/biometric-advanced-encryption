@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="fab_margin">16dp</dimen>
+
+  <dimen name="emphasis_high">0.87</dimen>
+  <dimen name="emphasis_medium">0.60</dimen>
+  <dimen name="emphasis_disabled">0.38</dimen>
+</resources>

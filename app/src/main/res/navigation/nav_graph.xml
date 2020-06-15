@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/EntriesFragment">
+
+  <fragment
+      android:id="@+id/EntriesFragment"
+      android:name="com.gary.encryption.ui.entries.EntriesFragment"
+      android:label="@string/entries_fragment_label">
+
+    <action
+        android:id="@+id/action_EntriesFragment_to_EditEntryFragment"
+        app:destination="@id/EditEntryFragment">
+      <argument
+          android:name="entryStardate"
+          android:defaultValue=" " />
+    </action>
+  </fragment>
+  <fragment
+      android:id="@+id/EditEntryFragment"
+      android:name="com.gary.encryption.ui.editentries.EditEntryFragment"
+      android:label="@string/edit_entry_fragment_label"
+      tools:layout="@layout/fragment_edit_entry">
+    <argument
+        android:name="entryStardate"
+        app:argType="string" />
+  </fragment>
+</navigation>

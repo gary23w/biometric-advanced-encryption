@@ -1,0 +1,42 @@
+<resources>
+  <string name="app_name">Encrypted</string>
+
+  <string name="action_key">Key</string>
+
+  <string name="entries_fragment_label">Entries Fragment</string>
+  <string name="edit_entry_fragment_label">Edit Entry Fragment</string>
+
+  <string name="dialog_log_key_title">Enter log key</string>
+  <string name="dialog_log_key_hint">Log key</string>
+  <string name="dialog_log_key_positive_button">Done</string>
+  <string name="dialog_log_key_negative_button">Cancel</string>
+
+  <string name="dialog_new_log_key_current_log_key_hint">Current log key</string>
+  <string name="dialog_new_log_key_new_log_key_hint">New log key</string>
+  <string name="dialog_new_log_key_positive_button">Done</string>
+  <string name="dialog_new_log_key_negative_button">Cancel</string>
+  <string name="dialog_new_log_key_title">Set a new log key</string>
+  <string name="dialog_set_log_key_title">Set Log Key</string>
+  <string name="dialog_set_log_key_negative_button">Cancel</string>
+
+  <string name="message_log_key_set">Log key set</string>
+  <string name="message_log_key_cleared">Log key cleared</string>
+
+  <string name="error_incorrect_log_key">Incorrect log key</string>
+  <string name="error_current_log_key_incorrect">Incorrect current log key</string>
+
+  <string name="error_entry_already_exists">Entry already exists</string>
+  <string name="error_generic_download_error">Unable to download and encrypt entry</string>
+  <string name="error_unable_to_decrypt">Unable to decrypt entry</string>
+  <string name="error_unable_to_save_entry">Unable to encrypt and save entry</string>
+  <string name="error_unable_to_authenticate_biometrically">Unable to authenticate biometrically</string>
+
+  <string name="edit_stardate_hint">Stardate</string>
+  <string name="edit_body_hint">Log entry body</string>
+  <string name="edit_menu_done_title">Done</string>
+  <string name="edit_menu_delete_title">Delete</string>
+
+  <string name="edit_log_key_title">Unlock?</string>
+  <string name="edit_log_key_description">Scan fingerprint</string>
+
+</resources>

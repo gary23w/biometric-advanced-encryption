@@ -18,21 +18,22 @@ class EditEntryViewModel(application: Application) : AndroidViewModel(applicatio
 
   val snackbar: LiveData<String?>
     get() = _snackbar
-
   private val _snackbar = MutableLiveData<String?>()
-
   private val context = getApplication<Application>().applicationContext
+  private var useFile = false
+
 
   fun onSnackbarShown() {
     _snackbar.value = null
   }
 
+
   fun encryptEntry(stardate: String, body:String, existingName: String) {
     if(stardate.isBlank()) return
     try {
         deleteEntry(existingName)
-      val encryptedFile = getEncryptedEntry(stardate)
-      encryptedFile.openFileOutput().use { output ->
+        val encryptedFile = getEncryptedEntry(stardate)
+        encryptedFile.openFileOutput().use { output ->
         output.write(body.toByteArray())
       }
     } catch (e: Exception) {
@@ -40,6 +41,7 @@ class EditEntryViewModel(application: Application) : AndroidViewModel(applicatio
       _snackbar.value = context.getString(R.string.error_unable_to_save_entry)
     }
   }
+
 
   fun decryptEntry(stardate: String): String {
    val encryptedFile = getEncryptedEntry(stardate)
@@ -55,6 +57,7 @@ class EditEntryViewModel(application: Application) : AndroidViewModel(applicatio
     }
   }
 
+
   fun deleteEntry(stardate: String) {
     if (stardate.isBlank()) return
     val file = File(context.filesDir, stardate.urlEncode())
@@ -68,8 +71,8 @@ class EditEntryViewModel(application: Application) : AndroidViewModel(applicatio
       setBlockModes((KeyProperties.BLOCK_MODE_GCM))
       setEncryptionPaddings((KeyProperties.ENCRYPTION_PADDING_NONE))
       setKeySize(256)
-//      setUserAuthenticationRequired(true)
-//      setUserAuthenticationValidityDurationSeconds(15)
+      setUserAuthenticationRequired(true)
+      setUserAuthenticationValidityDurationSeconds(15)
       if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
         setUnlockedDeviceRequired(true)
         setIsStrongBoxBacked(true)

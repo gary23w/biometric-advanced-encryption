@@ -38,7 +38,7 @@ class EntryAdapter(
     fun bind(entry: LogEntry, listener: EntryAdapterListener?) {
       this.entry = entry
       itemView.stardate.text = entry.stardate
-
+      itemView.hasImage.setImageResource(R.drawable.ic_check)
       itemView.setOnClickListener {
         listener?.onEntryClicked(entry)
       }

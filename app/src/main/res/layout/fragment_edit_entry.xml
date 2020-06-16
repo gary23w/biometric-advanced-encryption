@@ -22,6 +22,21 @@
         android:background="@android:color/transparent"
         android:minHeight="?attr/actionBarSize"
         app:navigationIcon="@drawable/ic_arrow_back" />
+    <Button
+        android:id="@+id/encryptButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Encrypt." />
+    <Button
+        android:id="@+id/decryptButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Decrypt." />
+    <Button
+        android:id="@+id/getFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select File." />
 
   </com.google.android.material.appbar.AppBarLayout>
 
@@ -42,19 +57,25 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="24dp"
-          android:inputType="numberDecimal"
           android:background="@android:color/transparent"
           android:hint="@string/edit_stardate_hint"
           android:textAppearance="?attr/textAppearanceHeadline4" />
 
-      <EditText
+      <TextView
           android:id="@+id/bodyEditText"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginTop="24dp"
           android:background="@android:color/transparent"
-          android:hint="@string/edit_body_hint"
+          android:visibility="gone"
           android:lineSpacingExtra="4sp" />
+
+      <ImageView
+          android:id="@+id/imageView2"
+          android:layout_width="match_parent"
+          android:layout_height="436dp"
+          app:srcCompat="@drawable/fingerprint_dialog_fp_to_error" />
+
 
     </LinearLayout>
 

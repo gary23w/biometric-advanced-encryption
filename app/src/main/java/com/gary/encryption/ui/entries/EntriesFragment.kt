@@ -70,17 +70,14 @@ class EntriesFragment : Fragment(),
       .observe(viewLifecycleOwner, Observer { newList ->
       adapter.submitList(newList)
     })
-
     fab.setOnClickListener {
       findNavController().navigate(R.id.action_EntriesFragment_to_EditEntryFragment)
     }
-
     promptInfo = BiometricPrompt.PromptInfo.Builder()
       .setTitle("log key title")
       .setDescription("test")
       .setDeviceCredentialAllowed(true)
       .build()
-
     biometricPrompt = BiometricPrompt(
       this,
       ContextCompat.getMainExecutor(context),

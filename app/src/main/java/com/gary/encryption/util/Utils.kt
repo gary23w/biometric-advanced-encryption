@@ -13,6 +13,11 @@ import java.net.URLDecoder
 import java.net.URLEncoder
 
 
+  const val PICK_IMAGE_REQUEST_CODE = 2
+  const val READ_STORAGE_PERMISSION_CODE = 1
+  var FILE_CHECK = false
+
+
 fun String.urlDecode():String = URLDecoder.decode(this, "UTF-8")
 
 fun String.urlEncode():String = URLEncoder.encode(this, "UTF-8")
